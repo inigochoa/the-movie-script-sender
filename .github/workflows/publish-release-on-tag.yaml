@@ -6,6 +6,9 @@ on:
       - '*.*.*'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-release-publish:
     if: github.ref_type == 'tag'
