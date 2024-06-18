@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "The Movie Script Sender",
+  "author": "inigochoa",
+  "description": "Sends movie scripts through popular messaging apps",
+  "version": "0.1.0",
+  "icons": {
+    "128": "imgs/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "imgs/icon.png"
+  },
+  "host_permissions": [
+    "https://web.whatsapp.com/"
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
+}
