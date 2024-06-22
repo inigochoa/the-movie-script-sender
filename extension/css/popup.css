@@ -1,3 +1,80 @@
-#mss-body {
-  width: 350px;
+:root {
+  --background-color: #fff;
+  --cta-color: #818cf8;
+  --text-color: #171717;
+  --white-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #171717;
+    --cta-color: #818cf8;
+    --text-color: #fafafa;
+  }
+}
+
+::-moz-selection {
+  background-color: var(--cta-color);
+  color: var(--white-color);
+}
+
+::selection {
+  background-color: var(--cta-color);
+  color: var(--white-color);
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  margin: 2rem;
+  width: 450px;
+
+}
+
+h1 {
+  font-family: cursive, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+select {
+  font-size: 1.1rem;
+  padding: .5rem;
+  width: 10rem;
+
+  &:focus {
+    outline: 1px solid var(--cta-color);
+  }
+}
+
+button {
+  font-size: 1rem;
+  padding: .5rem 1.25rem;
+
+  background-color: var(--background-color);
+  border: 1px solid var(--cta-color);
+  border-radius: .25rem;
+  color: var(--cta-color);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--cta-color);
+    color: var(--white-color);
+  }
+}
+
+.mss-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
 }
