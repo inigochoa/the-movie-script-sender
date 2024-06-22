@@ -2,7 +2,7 @@ document.querySelectorAll('[data-i18n]').forEach(elem => {
   elem.innerText = chrome.i18n.getMessage(elem.dataset.i18n)
 })
 
-const mssSendLines = () => {
+const mssSendLines = (movie) => {
   const html = document.querySelector('html#whatsapp-web')
   if (!html) {
     return
@@ -30,7 +30,7 @@ const mssSendLines = () => {
     return 'en'
   }
 
-  fetch(`https://raw.githubusercontent.com/inigochoa/the-movie-script-sender/main/scripts/shrek/${findLanguage()}.json`)
+  fetch(`https://raw.githubusercontent.com/inigochoa/the-movie-script-sender/main/scripts/${movie}/${findLanguage()}.json`)
     .then((response) => response.json())
     .then(async (lines) => {
       for (const line of lines) {
@@ -56,9 +56,12 @@ const mssOnClick = () => {
     chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },
       func: mssSendLines,
+      args: [ select.value ],
     })
   })
 }
 
 const button = document.getElementById('mss-send-button')
+const select = document.getElementById('mss-movie')
+
 button.addEventListener('click', mssOnClick)
