@@ -1,4 +1,5 @@
 {
   "manifest_description": { "message": "Envía guiones de películas a través de las aplicaciones de mensajería más populares" },
+  "manifest_name": { "message": "The Movie Script Sender" },
   "popup_button_send": { "message": "Enviar" }
 }
