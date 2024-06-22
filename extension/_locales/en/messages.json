@@ -1,0 +1,6 @@
+{
+  "manifest_description": { "message": "Sends movie scripts through popular messaging apps" },
+  "manifest_name": { "message": "The Movie Script Sender" },
+  "popup_button_send": { "message": "Send" },
+  "popup_title": { "message": "The Movie Script Sender" }
+}

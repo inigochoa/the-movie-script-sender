@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "The Movie Script Sender",
+  "default_locale": "en",
+  "name": "__MSG_manifest_name__",
+  "description": "__MSG_manifest_description__",
   "short_name": "The MSS",
   "author": "inigochoa",
-  "description": "Sends movie scripts through popular messaging apps",
   "version": "1.1.0",
   "icons": {
     "128": "imgs/icon.png"

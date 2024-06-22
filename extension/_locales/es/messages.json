@@ -1,0 +1,4 @@
+{
+  "manifest_description": { "message": "Envía guiones de películas a través de las aplicaciones de mensajería más populares" },
+  "popup_button_send": { "message": "Enviar" }
+}
